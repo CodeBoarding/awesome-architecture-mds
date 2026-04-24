@@ -135,6 +135,20 @@ Or reference it directly in your prompt:
 Using the architecture above, implement X without breaking module boundaries.
 ```
 
+## How diagrams are generated
+
+```mermaid
+flowchart LR
+    Code[Source Code] --> CB
+    subgraph CB [CodeBoarding]
+        direction LR
+        Clone[Clone repo] --> Static[Static analysis] --> LLM[LLM reasoning]
+    end
+    CB --> MD[architecture.md]
+```
+
+Every diagram is produced by running [**CodeBoarding**](https://codeboarding.com) — a local static-analysis + LLM-reasoning engine — over the repo at `--depth-level 2`. The engine parses real imports, call graphs, and module boundaries; the LLM only names and summarizes. No diagram is hand-drawn.
+
 ## Browse the atlas
 
 ### AI & LLM infrastructure
@@ -165,24 +179,6 @@ Using the architecture above, implement X without breaking module boundaries.
 
 *(Full index: [INDEX.md](./INDEX.md) — 50 repos, auto-generated.)*
 
-## How diagrams are generated
-
-```mermaid
-flowchart LR
-    Code[Source Code] --> CB
-    subgraph CB [CodeBoarding]
-        direction LR
-        Clone[Clone repo] --> Static[Static analysis] --> LLM[LLM reasoning]
-    end
-    CB --> MD[architecture.md]
-```
-
-Every diagram is produced by running [**CodeBoarding**](https://codeboarding.com) — a local static-analysis + LLM-reasoning engine — over the repo at `--depth-level 2`. The engine parses real imports, call graphs, and module boundaries; the LLM only names and summarizes. No diagram is hand-drawn.
-
-Each folder contains:
-- `architecture.md` — the human-readable diagram
-- `analysis.json` — the structured source of truth
-- `file_coverage.json` — which files the analysis was grounded in
 
 ## Contribute
 
@@ -195,7 +191,7 @@ Each folder contains:
 
 We prioritize repos that are (a) actively maintained, (b) widely depended on, or (c) architecturally interesting.
 
-**Running this on your own code?** [CodeBoarding](https://codeboarding.com) runs locally — point it at any repo, public or private.
+**Running this on your own code?** [CodeBoarding](https://codeboarding.com) runs locally. Point it at any repo, public or private.
 
 ## License
 
