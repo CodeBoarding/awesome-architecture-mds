@@ -135,20 +135,6 @@ Or reference it directly in your prompt:
 Using the architecture above, implement X without breaking module boundaries.
 ```
 
-## How diagrams are generated
-
-```mermaid
-flowchart LR
-    Code[Source Code] --> CB
-    subgraph CB [CodeBoarding]
-        direction LR
-        Clone[Clone repo] --> Static[Static analysis] --> LLM[LLM reasoning]
-    end
-    CB --> MD[architecture.md]
-```
-
-Every diagram is produced by running [**CodeBoarding**](https://codeboarding.com) — a local static-analysis + LLM-reasoning engine — over the repo at `--depth-level 2`. The engine parses real imports, call graphs, and module boundaries; the LLM only names and summarizes. No diagram is hand-drawn.
-
 ## Browse the atlas
 
 ### AI & LLM infrastructure
@@ -179,6 +165,20 @@ Every diagram is produced by running [**CodeBoarding**](https://codeboarding.com
 
 *(Full index: [INDEX.md](./INDEX.md) — 50 repos, auto-generated.)*
 
+
+## How diagrams are generated
+
+```mermaid
+flowchart LR
+    Code[Source Code] --> CB
+    subgraph CB [CodeBoarding]
+        direction LR
+        Clone[Clone repo] --> Static[Static analysis] --> LLM[LLM reasoning]
+    end
+    CB --> MD[architecture.md]
+```
+
+Every diagram is produced by running [**CodeBoarding**](https://codeboarding.com) — a local static-analysis + LLM-reasoning engine — over the repo at `--depth-level 2`. The engine parses real imports, call graphs, and module boundaries; the LLM only names and summarizes. No diagram is hand-drawn.
 
 ## Contribute
 
