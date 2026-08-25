@@ -962,8 +962,8 @@ Using the architecture above, implement X without breaking module boundaries.
 - [hypothesis-torch](./developer-tools/hypothesis-torch/on_boarding.md) - Property-based testing extension for PyTorch models via Hypothesis. _(Python)_
 - [IOS13-SimulateTouch](./developer-tools/IOS13-SimulateTouch/on_boarding.md) - iOS automation framework with Python client and on-device tweak for touch simulation. _(Python)_
 - [locust](./developer-tools/locust/on_boarding.md) - Python load testing framework where users write scenarios as code. _(Python)_
+- [mozarkai/optics-framework](./developer-tools/mozarkai-optics-framework/on_boarding.md) - Self-healing UI test automation across Appium, Selenium, and Playwright with keyword-driven APIs. _(Python)_
 - [openhtf](./developer-tools/openhtf/on_boarding.md) - Python framework for building scalable manufacturing hardware test automation. _(Python)_
-- [optics-framework](./developer-tools/optics-framework/on_boarding.md) - Self-healing UI test automation across Appium, Selenium, and Playwright with keyword-driven APIs. _(Python)_
 - [perfplot](./developer-tools/perfplot/on_boarding.md) - Python micro-benchmarking library with automatic runtime plotting. _(Python)_
 - [pytest](./developer-tools/pytest/on_boarding.md) - Plugin-driven Python testing framework for writing expressive tests. _(Python)_
 - [pytest-xdist](./developer-tools/pytest-xdist/on_boarding.md) - Pytest plugin for distributed parallel test execution across workers. _(Python)_
